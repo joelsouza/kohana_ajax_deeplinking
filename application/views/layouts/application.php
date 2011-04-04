@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title><?php echo $title ?></title>
   <?php echo html::script("public/javascripts/jquery-1.5.2.min.js") ?>
-  <?php echo html::script("public/javascripts/jquery.address-1.3.2.min.js") ?>
+  <?php // echo html::script("public/javascripts/jquery.address-1.3.2.min.js") ?>
 
   <style type="text/css">
     nav ul{
@@ -23,12 +23,18 @@
   
   <script type="text/javascript">
     $(function(){
+      /*
       $.address.init().change(function(event){
-        $("section").load($("[rel='address:" + event.value + "']").attr('href'))
+        if(event.value == "/teste"){
+          $("#alert").trigger("click")
+        }else{
+          $("section").load($("[rel='address:" + event.value + "']").attr('href'))  
+        } 
       })
       $("nav a").click(function(){
         $("section").load($(this).attr("href"))
       })
+      */
     })
   </script>
 </head>
